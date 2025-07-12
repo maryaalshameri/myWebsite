@@ -1,88 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Personal Website</title>
-  <link rel="stylesheet" href="css/style2.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my personal webSide</title>
+    <link rel="stylesheet" href="css/style-responsive-fixed.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <header>
-    <nav>
-      <ul class="navbar">
-        <li><a href="#bio">Bio</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#Courses">Certificates & Courses</a></li>
-        <li><a href="#Testimonials">Testimonials</a></li>
-        <li><a href="#cv">download cv</a></li>
-        <li><a href="#contact">Contact</a></li>
-
-
-
-
+<body class="light-mode">
+   <div class="container">
+    <header>
+    <nav class="navbar">
+      <div class="logo"><img src="img/2.jpg" alt="My Profile Picture"></div>
+      
+      <ul class="nav-links">
+        <li><a href="#bio"><i class="fas fa-user"></i> Bio</a></li>
+        <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+        <li><a href="#portfolio"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+        <li><a href="#Courses"><i class="fas fa-graduation"></i> Certificates & Courses</a></li>
+        <li><a href="#Testimonials"><i class="fas fa-comment"></i> Testimonials</a></li>
+        <li><a href="#cv"><i class="fas fa-download"></i> download cv</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        
       </ul>
+      <button class="toggle-mode" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
     </nav>
     <div class="header-content" id="bio">
-      
-      <img src="img/2.jpg" alt="My Profile Picture" class="profile-pic">
-      <h2>about me ^ - ^</h2>
+      <img src="img/5.jpg" alt="My Profile Picture" class="profile-pic animated">
+      <div>
+         <h2>about me ^ - ^</h2>
       <p >Hi, I'm Marya.<br>  Web Developer | engineer it | full stack web | fornend | backend | database.</p>
+      </div>
+     
     </div>
   </header>
+    <asid class="side-bar"> 
+      <button class="menu-toggle" id ="menuToggle"  aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#bio"><i class="fas fa-user"></i> Bio</a></li>
+        <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+        <li><a href="#portfolio"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        <li><a href="#Courses"><i class="fas fa-certificate"></i> Certificates & Courses</a></li>
+        <li><a href="#Testimonials"><i class="fas fa-comment"></i> Testimonials</a></li>
+        <li><a href="#cv"><i class="fas fa-download"></i> download cv</a></li>
+        
 
-  <main>
-    <section id="skills">
+      </ul>
+     
+    </asid>
+    <main>
+        <section id="skills">
       <h2>My Skills</h2>
-      <ul class="skills-list">
-        <li>HTML & CSS</li>
-        <li>JavaScript</li>
-        <li>UI/UX Design</li>
-      </ul>
+      <div class="skills-list">
+        <div>HTML & CSS</div>
+        <div>JavaScript</div>
+        <div>UI/UX Design</div>
+        <div>Responsive Design</div>
+         <div>paython</div>
+        <div>php</div>
+      </div>
     </section>
-
-    <section id="portfolio">
+     <section id="portfolio">
       <h2>My Portfolio</h2>
-      <ul class="portfolio-list">
-        <li><a href="https://github.com/maryaalshameri/digital_card">📁 Digital Card</a></li>
-        <li><a href="https://github.com/Dh-Kh-2020/html_course">📁  html course</a></li>
-         <li><a href="#">📁  costumer service</a></li>
-          <li><a href="#">📁  shopping time store</a></li>
-      </ul>
+      <div class="portfolio-list">
+        <div><a href="https://github.com/maryaalshameri/digital_card">📁 Digital Card</a></div>
+        <div><a href="https://github.com/Dh-Kh-2020/html_course">📁 To-do App</a></div>
+         <div><a href="#">📁  costumer service</a></div>
+          <div><a href="#">📁  shopping time store</a></div>
+      
+      </div>
     </section>
 
     <section id="Courses">
       <h2>My Certificates & Courses</h2>
-      <ul class="Courses-list">
-        <li>B.E in IT</li>
-        <li>International license</li>
-        <li>oracle </li>
-        <li>graphic Design</li>
+      <div class="Courses-list">
+        <div>B.E in IT</div>
+        <div>International license</div>
+        <div>oracle </div>
+        <div>graphic Design</div>
 
-      </ul>
+      </div>
     </section>
+    
 
     <section id="Testimonials">
       <h2>Testimonials</h2>
-      <ul class="Testimonials-list">
+      <div class="Testimonials-list">
         <blockquote>
       “Marya was amazing to work with – super creative and fast!”
-    </blockquote>
+        </blockquote>
     <blockquote>
       “Professional and responsive. Highly recommended!”
     </blockquote>
 
-      </ul>
+  </div>
     </section>
 
     <section id="cv">
       <h2>Download My Resume</h2>
       <a href="" class="download" download=""><button>download resume</button></a>
     </section>
- <button id="scrollTopBtn" title="Top">↑</button>
+
+   <div class="fixed-flex-box">
+    <button id="scrollToTopBtn" title="Top">↑</button>
+   </div> 
+ 
 
    
-  </main>
-  <footer id="contact">
+    </main>
+    <footer id="contact">
+      
     <h2>Contact Me</h2>
     <ul>
         <ol> <a href="marynaalshameri@gmail.com" target="_blank" rel="noopener noreferrer"> Email</a></ol>
@@ -92,11 +124,47 @@
         <ol> <a href=" " target="_blank" rel="noopener noreferrer"> whatsApp</a></ol>
         <ol> <a href=" " target="_blank" rel="noopener noreferrer"> telegram</a></ol>
             </ul>
-    <!-- <p>Email: <a href="mailto:marya@example.com">marya@example.com</a></p>
-    <p>
-      <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a> |
-      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-    </p> -->
-  </footer>
+            
+    </footer>
+    
+  </div>
+  <script>
+    const toggleBtn = document.querySelector('.toggle-mode');
+    const body = document.body;
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      body.classList.toggle('light-mode');
+    });
+
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+
+
+
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  const flexBox = document.querySelector(".fixed-flex-box");
+
+  // إظهار أو إخفاء الزر عند التمرير
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 100) {
+      flexBox.classList.add("show");
+    } else {
+      flexBox.classList.remove("show");
+    }
+  });
+
+  // عند الضغط على الزر، الرجوع لأعلى الصفحة
+  scrollToTopBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+
+  </script>
 </body>
 </html>
