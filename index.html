@@ -1,170 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my personal webSide</title>
-    <link rel="stylesheet" href="css/style-responsive-fixed.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marya | my wibsite</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="light-mode">
-   <div class="container">
-    <header>
-    <nav class="navbar">
-      <div class="logo"><img src="img/2.jpg" alt="My Profile Picture"></div>
-      
-      <ul class="nav-links">
-        <li><a href="#bio"><i class="fas fa-user"></i> Bio</a></li>
-        <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
-        <li><a href="#portfolio"><i class="fas fa-briefcase"></i> Portfolio</a></li>
-        <li><a href="#Courses"><i class="fas fa-graduation"></i> Certificates & Courses</a></li>
-        <li><a href="#Testimonials"><i class="fas fa-comment"></i> Testimonials</a></li>
-        <li><a href="#cv"><i class="fas fa-download"></i> download cv</a></li>
-        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-        
-      </ul>
-      <button class="toggle-mode" aria-label="Toggle dark mode">
-        <i class="fas fa-moon"></i>
-      </button>
-    </nav>
-    <div class="header-content" id="bio">
-      <img src="img/5.jpg" alt="My Profile Picture" class="profile-pic animated">
-      <div>
-         <h2>about me ^ - ^</h2>
-      <p >Hi, I'm Marya.<br>  Web Developer | engineer it | full stack web | fornend | backend | database.</p>
-      </div>
-     
+
+<body>
+  <header>
+    <button class="toggle-mode" onclick="toggleMode()"><i class="fas fa-moon"></i></button>
+    <button class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+    <div class="logo">
+      <img src="img/2.jpg" alt="Profile Picture">
     </div>
-  </header>
-    <asid class="side-bar"> 
-      <button class="menu-toggle" id ="menuToggle"  aria-label="Toggle menu">
-        <i class="fas fa-bars"></i>
-      </button>
-      <ul class="nav-links" id="navLinks">
+    <h1>Marya Alshameri</h1>
+    <p class="name">Web Developer | Engineer | Full Stack | Frontend & Backend</p>
+    <nav>
+      <ul id="navLinks">
         <li><a href="#bio"><i class="fas fa-user"></i> Bio</a></li>
         <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
         <li><a href="#portfolio"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+        <li><a href="#courses"><i class="fas fa-certificate"></i> Courses</a></li>
+        <li><a href="#certificates"><i class="fas fa-award"></i> Certificates</a></li>
+        <li><a href="#testimonials"><i class="fas fa-comment"></i> Testimonials</a></li>
+        <li><a href="#sendme"><i class="fas fa-paper-plane"></i> Send Me</a></li>
         <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-        <li><a href="#Courses"><i class="fas fa-certificate"></i> Certificates & Courses</a></li>
-        <li><a href="#Testimonials"><i class="fas fa-comment"></i> Testimonials</a></li>
-        <li><a href="#cv"><i class="fas fa-download"></i> download cv</a></li>
-        
-
       </ul>
-     
-    </asid>
+    </nav>
+  </header>
+
+  <div class="container">
     <main>
-        <section id="skills">
-      <h2>My Skills</h2>
-      <div class="skills-list">
-        <div>HTML & CSS</div>
-        <div>JavaScript</div>
-        <div>UI/UX Design</div>
-        <div>Responsive Design</div>
-         <div>paython</div>
-        <div>php</div>
-      </div>
-    </section>
-     <section id="portfolio">
-      <h2>My Portfolio</h2>
-      <div class="portfolio-list">
-        <div><a href="https://github.com/maryaalshameri/digital_card">📁 Digital Card</a></div>
-        <div><a href="https://github.com/Dh-Kh-2020/html_course">📁 To-do App</a></div>
-         <div><a href="#">📁  costumer service</a></div>
-          <div><a href="#">📁  shopping time store</a></div>
       
-      </div>
-    </section>
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-list">
+          <div>HTML</div>
+          <div>CSS</div>
+          <div>JavaScript</div>
+          <div>PHP</div>
+          <div>Python</div>
+          <div>MySQL</div>
+          <div>UI/UX</div>
+          <div>Git</div>
+        </div>
+      </section>
 
-    <section id="Courses">
-      <h2>My Certificates & Courses</h2>
-      <div class="Courses-list">
-        <div>B.E in IT</div>
-        <div>International license</div>
-        <div>oracle </div>
-        <div>graphic Design</div>
+      <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="grid">
+          <div class="portfolio-item"><a href="https://github.com/maryaalshameri/digital_card" target="_blank"><img src="img/project1.jpg" alt="Digital Card"></a></div>
+          <div class="portfolio-item"><a href="#" target="_blank"><img src="img/project2.jpg" alt="Customer Service App"></a></div>
+          <div class="portfolio-item"><a href="#" target="_blank"><img src="img/project3.jpg" alt="housepital App"></a></div>
+          <div class="portfolio-item"><a href="#" target="_blank"><img src="img/project2.jpg" alt="shopping time store"></a></div>
+          <div class="portfolio-item"><a href="#" target="_blank"><img src="img/project3.jpg" alt="personal website"> </a></div>
+        </div>
+      </section>
 
-      </div>
-    </section>
-    
+      <section id="courses">
+        <h2>Courses</h2>
+        <div class="grid">
+          <div class="course-item">Frontend Development</div>
+          <div class="course-item">Oracle Database</div>
+          <div class="course-item">Graphic Design</div>
+          <div class="course-item">International Computer License</div>
+        </div>
+      </section>
 
-    <section id="Testimonials">
-      <h2>Testimonials</h2>
-      <div class="Testimonials-list">
-        <blockquote>
-      “Marya was amazing to work with – super creative and fast!”
-        </blockquote>
-    <blockquote>
-      “Professional and responsive. Highly recommended!”
-    </blockquote>
+      <section id="certificates">
+        <h2>Certificates</h2>
+        <div class="certificates-list">
+          <div>Frontend Development Certificate</div>
+          <div>Oracle Database Certificate</div>
+          <div>Graphic Design Certificate</div>
+          <div>International Computer License</div>
+        </div>
+      </section>
 
-  </div>
-    </section>
+      <section id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonials-list">
+          <div>"Marya is extremely professional and talented. Highly recommend!"</div>
+          <div>"Working with Marya was a great experience. Very responsive and skilled."</div>
+          <div>"Creative, efficient, and reliable. A great addition to any project."</div>
+        </div>
+      </section>
+<section id="bio">
+        <h2>About Me</h2>
+        <p>Hi, I'm Marya. Passionate about building responsive, elegant, and accessible web applications.</p>
+        <a href="cv/MaryaCV.pdf" class="download-btn" download><i class="fas fa-download"></i> Download CV</a>
+      </section>
 
-    <section id="cv">
-      <h2>Download My Resume</h2>
-      <a href="" class="download" download=""><button>download resume</button></a>
-    </section>
-
-   <div class="fixed-flex-box">
-    <button id="scrollToTopBtn" title="Top">↑</button>
-   </div> 
- 
-
-   
+      <section id="sendme">
+        <h2>Send Me a Message</h2>
+        <form>
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
     </main>
+
     <footer id="contact">
-      
-    <h2>Contact Me</h2>
-    <ul>
-        <ol> <a href="marynaalshameri@gmail.com" target="_blank" rel="noopener noreferrer"> Email</a></ol>
-        <ol> <a href="https://github.com/maryaalshameri" target="_blank" rel="noopener noreferrer"> my GitHub</a></ol>
-        <ol> <a href=" " target="_blank" rel="noopener noreferrer"> facebook</a></ol>
-        <ol> <a href=" " target="_blank" rel="noopener noreferrer"> instagram</a></ol>
-        <ol> <a href=" " target="_blank" rel="noopener noreferrer"> whatsApp</a></ol>
-        <ol> <a href=" " target="_blank" rel="noopener noreferrer"> telegram</a></ol>
-            </ul>
-            
+      <h2>Contact Me</h2>
+      <ul>
+        <li><a href="mailto:marynaalshameri@gmail.com" target="_blank"><i class="fas fa-envelope"></i> Email</a></li>
+        <li><a href="https://github.com/maryaalshameri" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+         <li><a href=" " target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i> facebook</a></li>
+        <li><a href=" " target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> instagram</a></li>
+        <li><a href=" " target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> whatsApp</a></li>
+        <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+      </ul>
     </footer>
-    
   </div>
+
+  <button id="scrollToTopBtn" title="Top">↑</button>
+
   <script>
-    const toggleBtn = document.querySelector('.toggle-mode');
-    const body = document.body;
-    toggleBtn.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      body.classList.toggle('light-mode');
-    });
-
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-
-
-
-
-  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-  const flexBox = document.querySelector(".fixed-flex-box");
-
-  // إظهار أو إخفاء الزر عند التمرير
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 100) {
-      flexBox.classList.add("show");
-    } else {
-      flexBox.classList.remove("show");
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('show');
     }
-  });
 
-  // عند الضغط على الزر، الرجوع لأعلى الصفحة
-  scrollToTopBtn.addEventListener("click", function () {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    const scrollBtn = document.getElementById("scrollToTopBtn");
+    window.addEventListener("scroll", () => {
+      scrollBtn.style.display = window.scrollY > 100 ? "block" : "none";
     });
-  });
 
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    ScrollReveal().reveal('section', {
+      origin: 'bottom',
+      distance: '30px',
+      duration: 1000,
+      delay: 100,
+      reset: true
+    });
   </script>
 </body>
 </html>
+
