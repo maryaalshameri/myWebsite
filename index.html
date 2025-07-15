@@ -6,19 +6,30 @@
   <title>Marya | my wibsite</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/scrollreveal"></script>
+  <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body id="top">
+
+  <input type="checkbox" id="dark-toggle" hidden>
+  <label for="dark-toggle" class="toggle-mode"><i class="fas fa-moon"></i></label>
+
+  <input type="checkbox" id="menu-toggle" hidden>
+
   <header>
-    <button class="toggle-mode" onclick="toggleMode()"><i class="fas fa-moon"></i></button>
-    <button class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+    <label for="menu-toggle" class="hamburger"><i class="fas fa-bars"></i></label>
     <div class="logo">
       <img src="img/2.jpg" alt="Profile Picture">
     </div>
     <h1>Marya Alshameri</h1>
-    <p class="name">Web Developer | Engineer | Full Stack | Frontend & Backend</p>
+    <p class="name">
+      <i class="fas fa-laptop-code"></i> Web Developer |
+      <i class="fas fa-cogs"></i> Engineer IT |
+      <i class="fas fa-layer-group"></i> Full Stack |
+      <i class="fas fa-code"></i> Frontend |
+      <i class="fas fa-database"></i> Backend
+    </p>
     <nav>
       <ul id="navLinks">
         <li><a href="#bio"><i class="fas fa-user"></i> Bio</a></li>
@@ -39,71 +50,120 @@
       <section id="skills">
         <h2>Skills</h2>
         <div class="skills-list">
-          <div>HTML</div>
-          <div>CSS</div>
-          <div>JavaScript</div>
-          <div>PHP</div>
-          <div>Python</div>
-          <div>MySQL</div>
-          <div>UI/UX</div>
-          <div>Git</div>
+            <div><i class="fab fa-html5"></i> HTML</div>
+            <div><i class="fab fa-css3-alt"></i> CSS</div>
+            <div><i class="fab fa-js"></i> JavaScript</div>
+            <div><i class="fab fa-php"></i> PHP</div>
+            <div><i class="fab fa-python"></i> Python</div>
+            <div><i class="fas fa-database"></i> MySQL</div>
+            <div><i class="fas fa-pencil-ruler"></i> UI/UX</div>
+            <div><i class="fab fa-git-alt"></i> Git</div>
         </div>
       </section>
 
       <section id="portfolio">
-        <h2>Portfolio</h2>
-        <div class="grid">
-          <div class="portfolio-item"><a href="https://github.com/maryaalshameri/digital_card" target="_blank"><img src="img/project1.jpg" alt="Digital Card"></a></div>
-          <div class="portfolio-item"><a href="#" target="_blank"><img src="img/project2.jpg" alt="Customer Service App"></a></div>
-          <div class="portfolio-item"><a href="#" target="_blank"><img src="img/project3.jpg" alt="housepital App"></a></div>
-          <div class="portfolio-item"><a href="#" target="_blank"><img src="img/project2.jpg" alt="shopping time store"></a></div>
-          <div class="portfolio-item"><a href="#" target="_blank"><img src="img/project3.jpg" alt="personal website"> </a></div>
-        </div>
-      </section>
+  <h2>Portfolio</h2>
+  <div class="grid">
+    <div class="portfolio-item">
+      <a href="https://github.com/maryaalshameri/digital_card" target="_blank">
+        <img src="img/8.jpg" alt="Digital Card">
+        <p><i class="fas fa-id-card"></i> Digital Card</p>
+      </a>
+    </div>
+
+    <div class="portfolio-item">
+      <a href="#" target="_blank">
+        <img src="img/5.jpg" alt="Customer Service App">
+        <p><i class="fas fa-headset"></i> Customer Service App</p>
+      </a>
+    </div>
+
+    <div class="portfolio-item">
+      <a href="#" target="_blank">
+        <img src="img/9.jpg" alt="Housepital App">
+        <p><i class="fas fa-hospital"></i> Housepital App</p>
+      </a>
+    </div>
+
+    <div class="portfolio-item">
+      <a href="#" target="_blank">
+        <img src="img/10.jpg" alt="Shopping Time Store">
+        <p><i class="fas fa-shopping-cart"></i> Shopping Time Store</p>
+      </a>
+    </div>
+
+    <div class="portfolio-item">
+      <a href="#" target="_blank">
+        <img src="img/11.jpg" alt="Personal Website">
+        <p><i class="fas fa-globe"></i> Personal Website</p>
+      </a>
+    </div>
+  </div>
+</section>
+
 
       <section id="courses">
         <h2>Courses</h2>
         <div class="grid">
-          <div class="course-item">Frontend Development</div>
-          <div class="course-item">Oracle Database</div>
-          <div class="course-item">Graphic Design</div>
-          <div class="course-item">International Computer License</div>
+          <div class="course-item"><i class="fas fa-code"></i> Frontend Development</div>
+          <div class="course-item"><i class="fas fa-database"></i> Oracle Database</div>
+          <div class="course-item"><i class="fas fa-paint-brush"></i> Graphic Design</div>
+          <div class="course-item"><i class="fas fa-laptop"></i> International Computer License</div>
         </div>
       </section>
 
       <section id="certificates">
         <h2>Certificates</h2>
         <div class="certificates-list">
-          <div>Frontend Development Certificate</div>
-          <div>Oracle Database Certificate</div>
-          <div>Graphic Design Certificate</div>
-          <div>International Computer License</div>
+            <div><i class="fas fa-certificate"></i> Frontend Development Certificate</div>
+            <div><i class="fas fa-certificate"></i> Oracle Database Certificate</div>
+            <div><i class="fas fa-certificate"></i> Graphic Design Certificate</div>
+            <div><i class="fas fa-certificate"></i> International Computer License</div>
+
         </div>
       </section>
 
       <section id="testimonials">
         <h2>Testimonials</h2>
         <div class="testimonials-list">
-          <div>"Marya is extremely professional and talented. Highly recommend!"</div>
-          <div>"Working with Marya was a great experience. Very responsive and skilled."</div>
-          <div>"Creative, efficient, and reliable. A great addition to any project."</div>
+        <div><i class="fas fa-quote-left"></i> "Marya is extremely professional and talented. Highly recommend!"</div>
+        <div><i class="fas fa-comment-dots"></i> "Working with Marya was a great experience. Very responsive and skilled."</div>
+        <div><i class="fas fa-star"></i> "Creative, efficient, and reliable. A great addition to any project."</div>
         </div>
       </section>
+
 <section id="bio">
-        <h2>About Me</h2>
-        <p>Hi, I'm Marya. Passionate about building responsive, elegant, and accessible web applications.</p>
-        <a href="cv/MaryaCV.pdf" class="download-btn" download><i class="fas fa-download"></i> Download CV</a>
-      </section>
+  <h2>About Me</h2>
+  <div class="bio-content">
+    <i class="fas fa-user-circle bio-icon"></i>
+    <p>Hi, I'm <strong>Marya</strong>. Passionate about building <span>responsive</span>, <span>elegant</span>, and <span>accessible</span> web applications.</p>
+  </div>
+  <a href="cv/MaryaCV.pdf" class="download-btn" download><i class="fas fa-download"></i> Download CV</a>
+</section>
+
 
       <section id="sendme">
-        <h2>Send Me a Message</h2>
-        <form>
-          <input type="text" placeholder="Your Name" required>
-          <input type="email" placeholder="Your Email" required>
-          <textarea rows="5" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      </section>
+  <h2>Send Me a Message</h2>
+  <form>
+    <div class="input-icon">
+      <i class="fas fa-user"></i>
+      <input type="text" placeholder="Your Name" required>
+    </div>
+    <div class="input-icon">
+      <i class="fas fa-envelope"></i>
+      <input type="email" placeholder="Your Email" required>
+    </div>
+    <div class="input-icon">
+      <i class="fas fa-comment-dots"></i>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+    </div>
+    <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+  </form>
+</section>
+
+      <a href="#top" id="goTop" class="go-top-link">
+    <i class="fa-solid fa-arrow-up"></i> Top
+  </a>
     </main>
 
     <footer id="contact">
@@ -119,9 +179,8 @@
     </footer>
   </div>
 
-  <button id="scrollToTopBtn" title="Top">↑</button>
 
-  <script>
+  <!-- <script>
     function toggleMenu() {
       document.getElementById('navLinks').classList.toggle('show');
     }
@@ -139,14 +198,15 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
+    
     ScrollReveal().reveal('section', {
       origin: 'bottom',
       distance: '30px',
       duration: 1000,
       delay: 100,
       reset: true
-    });
-  </script>
+    }); 
+  </script>  -->
 </body>
 </html>
 
