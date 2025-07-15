@@ -7,15 +7,19 @@
       --light-color: #f9f9f9;
       --font-family: 'Roboto', sans-serif;
     }
-    body.dark-mode {
+   #dark-toggle:checked ~ * {
       --primary-color: #452475;
-      --secondary-color: #2c2c2c;
+      --secondary-color: #baa2c4;
       --accent-color: #7b1fa2;
       --text-color: #f5f5f5;
       --bg-color: #1c1c1c;
-      --light-color: #3b343f;
+      --light-color:#a990ad;
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+     
+    * { 
+      margin: 0;
+       padding: 0;
+        box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       font-family: var(--font-family);
@@ -25,7 +29,7 @@
     }
     header {
       background: var(--primary-color);
-      color: white;
+      color: var(--bg-color);
       padding: 20px;
       position: relative;
       text-align: center;
@@ -35,7 +39,7 @@
       height: 90px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid white;
+      border: 3px solid var(--bg-color);
        transform: translateY(20px);
   animation: fadeInUp 1s ease forwards;
     }
@@ -45,8 +49,17 @@
     transform: translateY(0);
   }
 }
+
+  nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 15px;
+    }
     
-    .hamburger, .toggle-mode {
+    /* .hamburger, .toggle-mode {
       position: absolute;
       top: 20px;
       background: none;
@@ -64,9 +77,9 @@
       flex-wrap: wrap;
       gap: 15px;
       margin-top: 15px;
-    }
+    } */
     nav ul li a {
-      color: white;
+      color: var(--bg-color);
       text-decoration: none;
       padding: 10px 15px;
       background: var(--accent-color);
@@ -77,7 +90,9 @@
       gap: 5px;
       transition: background 0.3s ease;
     }
-    nav ul li a:hover { background: #8e24aa; }
+    nav ul li a:hover { 
+      background: var(--secondary-color);
+    color: var(--text-color); }
     .container {
       display: grid;
       grid-template-areas: 'main' 'footer';
@@ -87,6 +102,11 @@
     
  header h1{
      font-family: "Edu QLD Hand", cursive;}
+     .name i {
+          color: var(--accent-color);
+          margin-right:5px;
+        }
+
     header p {transition: transform 1s ease;
 animation: fadeIn 1.5s ease-in;}
 @keyframes fadeIn{
@@ -102,6 +122,7 @@ animation: fadeIn 1.5s ease-in;}
       width: 100%;
     }
     h2 {  transition: transform 0.3s ease;
+      color: var(--text-color);
 }
 
 h2:hover {
@@ -135,6 +156,19 @@ h2:hover {
       object-fit: cover;
       transition: transform 0.3s;
     }
+
+      .portfolio-item p {
+        margin-top: 8px;
+        font-weight: 500;
+        text-align: center;
+        color: var(--text-color);
+      }
+
+      .portfolio-item i {
+        margin-right: 6px;
+        color: var(--primary-color);
+      }
+
     .portfolio-item img:hover { transform: scale(1.05); }
     .testimonials-list {
       display: flex;
@@ -147,53 +181,130 @@ h2:hover {
       padding: 15px;
       border-radius: 10px;
     }
+
+        .skills-list i,
+        .course-item i,
+        .certificates-list i,
+        .testimonials-list i{
+          margin-right: 8px;
+           color: var(--primary-color);
+         }
     form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      max-width: 500px;
-      margin: auto;
-    }
-    form input, form textarea {
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-    form button {
-      padding: 10px;
-      background: var(--accent-color);
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    form button:hover { background: #8e24aa; }
-    .download-btn {
-      display: inline-block;
-      padding: 10px 20px;
-      margin-top: 10px;
-      background: var(--accent-color);
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-    .download-btn:hover { background: #8e24aa; }
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  background-color: var(--light-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.input-icon {
+  position: relative;
+}
+
+.input-icon i {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: var(--primary-color);
+}
+
+.input-icon input,
+.input-icon textarea {
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  resize: none;
+}
+
+form button {
+  padding: 12px;
+  background: var(--accent-color);
+  color:var(--bg-color);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: var(--primary-color);
+}
+
+  #bio {
+  background: var(--secondary-color);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.bio-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.bio-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+.bio-content strong {
+  color: var(--primary-color);
+}
+.bio-content p span {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.bio-content .highlight {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--accent-color);
+  color: var(--bg-color);
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+  background: var(--primary-color);
+}
+
     footer {
       grid-area: footer;
       background: var(--secondary-color);
       text-align: center;
-      padding: 20px;
+      padding: 15px;
     }
     footer ul {
       list-style: none;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 15px;
+      gap: 5px;
       margin-top: 10px;
+      
     }
     footer ul li a {
       text-decoration: none;
@@ -201,36 +312,93 @@ h2:hover {
       font-weight: bold;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 15px;
+       border-radius: 20px;
+       padding: 10px 15px;
+
+      
     }
-    #scrollToTopBtn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
+    footer ul li a:hover { 
       background: var(--accent-color);
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 50%;
-      font-size: 18px;
+    color: var(--bg-color); }
+.go-top-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  margin: 40px auto 20px auto;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* تغير لون الزر عند المرور عليه */
+.go-top-link:hover {
+  background-color: var(--primary-color);
+}
+
+/* عند النقر على الزر واستخدام :target لجعله يختفي */
+#top:target ~ .go-top-link {
+  display: none;
+}
+
+
+.go-top-link i {
+  font-size: 20px;
+}
+
+.toggle-mode {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 1.5rem;
+      color:var(--bg-color);
       cursor: pointer;
-      display: none;
-      z-index: 1000;
+      z-index: 100;
     }
+
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      color: var(--bg-color);
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 100;
+    }
+
     @media (max-width: 768px) {
+    .hamburger {
+        display: block;
+      }
+
       nav ul {
+        display: none;
         flex-direction: column;
         align-items: center;
-        display: none;
         background: var(--primary-color);
-        margin-top: 10px;
-        padding: 10px 0;
+        padding: 10px;
         border-radius: 10px;
+        margin-top: 10px;
       }
-      nav ul.show { display: flex; }
+
+      #menu-toggle:checked ~ header nav ul {
+        display: flex;
+      }
       footer ul {
         flex-direction: column;
         align-items: flex-start;
         padding-left: 20px;
       }
     }
+
+
+    
